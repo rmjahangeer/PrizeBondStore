@@ -81,6 +81,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Mappers\Mapper.cs" />
+    <Compile Include="Models\Denomination.cs" />
+    <Compile Include="Repository.cs" />
+    <Page Include="Denominations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -91,6 +98,9 @@
     </Compile>
     <Compile Include="Denomination.cs">
       <DependentUpon>PrizeBondModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Denominations.xaml.cs">
+      <DependentUpon>Denominations.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -166,10 +176,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\PrizeBond.mdf">
+    <Content Include="PrizeBond.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="App_Data\PrizeBond_log.ldf">
+    <Content Include="PrizeBond_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>PrizeBond.mdf</DependentUpon>
     </Content>
@@ -185,6 +195,7 @@
       <LastGenOutput>PrizeBondModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

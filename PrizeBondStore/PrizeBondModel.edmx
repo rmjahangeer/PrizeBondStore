@@ -56,7 +56,7 @@
             <PropertyRef Name="DenominationId" />
           </Key>
           <Property Name="DenominationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Type" Type="Decimal" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PrizeBonds" Relationship="PrizeBondModel.FK_PrizeBond_Denomination" FromRole="Denomination" ToRole="PrizeBond" />
         </EntityType>
         <EntityType Name="PrizeBond">
