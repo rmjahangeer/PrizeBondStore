@@ -173,6 +173,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>PrizeBond.mdf</DependentUpon>
     </Content>
+    <Content Include="DB_Scripts\DB.sql" />
     <Content Include="PrizeBondModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>PrizeBondModel.edmx</DependentUpon>
