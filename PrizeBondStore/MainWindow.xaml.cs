@@ -15,6 +15,9 @@ namespace PrizeBondStore
         private void PrizeBondBtn_Click(object sender, RoutedEventArgs e)
         {
             
+            var p = new PrizeBonds();
+            this.Close();
+            p.Show();
         }
 
         private void DenominationBtn_Click(object sender, RoutedEventArgs e)

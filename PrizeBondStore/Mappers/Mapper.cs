@@ -23,5 +23,15 @@ namespace PrizeBondStore.Mappers
             };
 
         }
+
+        public static PrizeBondModel CreateFrom(this PrizeBond source)
+        {
+            return new PrizeBondModel
+            {
+                Type = source.Denomination?.Type.ToString(),
+                Code = source.PrizeBondCode
+            };
+
+        }
     }
 }
